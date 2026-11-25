@@ -288,6 +288,7 @@ form,.info{padding:26px}}
 <label for="p">Телефон</label><input id="p" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __">
 <label for="s">Послуга</label>
 <select id="s"><option>Класичний масаж</option><option>Релакс з оліями</option><option>Спортивний масаж</option><option>Масаж обличчя</option></select>
+<input type="text" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 <button class="btn" type="submit">Записатися</button>
 <div class="ok" id="ok" role="status"></div>
 </form>
@@ -319,13 +320,18 @@ els.forEach(function(e){io.observe(e)});
 var ls=document.querySelectorAll('.layer'),t=false;
 function par(){var y=window.scrollY;if(y<1200)ls.forEach(function(l){l.style.transform='translate3d(0,'+(y*l.dataset.s)+'px,0)'});t=false}
 window.addEventListener('scroll',function(){if(!t){t=true;requestAnimationFrame(par)}},{passive:true});
+var MAIL='kalenicenkoegor7@gmail.com';
 document.getElementById('form').addEventListener('submit',function(e){
 e.preventDefault();
-var n=document.getElementById('n').value.trim(),p=document.getElementById('p').value.trim(),o=document.getElementById('ok');
+var f=this,n=document.getElementById('n').value.trim(),p=document.getElementById('p').value.trim(),sv=document.getElementById('s').value,o=document.getElementById('ok'),btn=f.querySelector('button');
 o.style.display='block';
 if(!n||p.replace(/\D/g,'').length<10){o.textContent='Вкажіть ім’я та телефон щонайменше з 10 цифр.';return}
-o.textContent='Дякуємо, '+n+'! Ми зателефонуємо вам найближчим часом.';
-this.reset();
+if(document.getElementById('hp').value)return;
+btn.disabled=true;btn.textContent='Надсилаємо…';
+fetch('https://formsubmit.co/ajax/'+MAIL,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({'Ім’я':n,'Телефон':p,'Послуга':sv,_subject:'Новий запис з сайту: '+sv,_template:'table',_captcha:'false'})})
+.then(function(r){if(!r.ok)throw 0;o.textContent='Дякуємо, '+n+'! Ми зателефонуємо вам найближчим часом.';f.reset()})
+.catch(function(){o.textContent='Не вдалося надіслати заявку. Зателефонуйте нам: +380 50 123 45 67.'})
+.then(function(){btn.disabled=false;btn.textContent='Записатися'});
 });
 })();
 </script>
