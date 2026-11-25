@@ -327,9 +327,12 @@ var f=this,n=document.getElementById('n').value.trim(),p=document.getElementById
 o.style.display='block';
 if(!n||p.replace(/\D/g,'').length<10){o.textContent='Вкажіть ім’я та телефон щонайменше з 10 цифр.';return}
 if(document.getElementById('hp').value)return;
-var body='Ім’я: '+n+'\nТелефон: '+p+'\nПослуга: '+sv;
-o.textContent='Відкриваємо вашу пошту. Натисніть «Надіслати» у листі, щоб завершити запис.';
-window.location.href='mailto:'+MAIL+'?subject='+encodeURIComponent('Новий запис: '+sv)+'&body='+encodeURIComponent(body);
+btn.disabled=true;btn.textContent='Надсилаємо…';
+var ac=new AbortController(),tm=setTimeout(function(){ac.abort()},15000);
+fetch('https://formsubmit.co/ajax/'+MAIL,{signal:ac.signal,method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({'Ім’я':n,'Телефон':p,'Послуга':sv,_subject:'Новий запис з сайту: '+sv,_template:'table',_captcha:'false'})})
+.then(function(r){if(!r.ok)throw 0;o.textContent='Дякуємо, '+n+'! Ми зателефонуємо вам найближчим часом.';f.reset()})
+.catch(function(){o.textContent='Не вдалося надіслати заявку. Зателефонуйте нам: +380 50 123 45 67.'})
+.then(function(){clearTimeout(tm);btn.disabled=false;btn.textContent='Записатися'});
 });
 })();
 </script>
