@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Оазис Тиші — масажний салон</title>
+<title>O.massage — масаж у Києві</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@ nav a:hover{color:var(--mint-d)}
 .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .card{background:var(--card);border-radius:28px;padding:34px 26px;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:transform .8s ease,box-shadow .8s ease}
 .card:hover{transform:translateY(-8px);box-shadow:0 26px 54px rgba(0,0,0,.5)}
-.card svg{width:54px;height:54px;margin-bottom:14px}
+.card .pic{margin:-34px -26px 20px;height:150px;border-radius:28px 28px 0 0;overflow:hidden}.card .pic svg{width:100%;height:100%;display:block;transition:transform 2.5s ease}.card:hover .pic svg{transform:scale(1.07)}
 .meta{margin-top:auto;display:flex;justify-content:space-between;padding-top:16px;border-top:1px solid rgba(212,175,106,.18);color:var(--brown);font-weight:600}
 /* why */
 #why{background:linear-gradient(180deg,var(--bg),var(--mint))}
@@ -90,14 +90,48 @@ blockquote cite{font-style:normal;font-weight:600;color:var(--mint-d);font-size:
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
 form,.info{background:var(--card);border-radius:30px;padding:38px;box-shadow:var(--shadow)}
 label{display:block;font-weight:600;font-size:.92rem;margin-bottom:6px;color:var(--brown)}
-input,select{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1.5px solid rgba(212,175,106,.22);border-radius:16px;padding:13px 16px;margin-bottom:20px;transition:border-color .5s,box-shadow .5s}
-input:focus,select:focus{outline:none;border-color:var(--mint-d);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint-d) 25%,transparent)}
-.ok{display:none;margin-top:18px;padding:14px 18px;border-radius:16px;background:var(--mint);color:var(--brown)}
+input,select,textarea{width:100%;font:inherit;color:var(--text);background:var(--bg);border:1.5px solid rgba(212,175,106,.22);border-radius:16px;padding:13px 16px;margin-bottom:20px;transition:border-color .5s,box-shadow .5s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--mint-d);box-shadow:0 0 0 4px color-mix(in srgb,var(--mint-d) 25%,transparent)}
+textarea{resize:vertical;margin-bottom:20px}.ok{display:none;margin-top:18px;padding:14px 18px;border-radius:16px;background:var(--mint);color:var(--brown)}
 .info dl{margin:0}.info dt{font-weight:600;color:var(--brown);margin-top:14px}.info dd{margin:0}
 .soc{display:flex;gap:12px;margin-top:22px;flex-wrap:wrap}
 .soc a{padding:8px 20px;border-radius:999px;background:var(--bg);color:var(--brown);text-decoration:none;font-weight:600;font-size:.92rem;transition:background .6s}
 .soc a:hover{background:var(--mint)}
 footer{text-align:center;padding:36px 24px calc(36px + env(safe-area-inset-bottom,0px));background:var(--brown);color:var(--bg);font-size:.9rem}
+.card .pic{margin:-34px -26px 20px}
+.pl{list-style:none;margin:auto 0 0;padding:14px 0 0;border-top:1px solid rgba(212,175,106,.25)}.pl li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;font-size:.95rem}.pl b{color:var(--brown);white-space:nowrap}
+.note{font-size:.9rem;opacity:.8;font-style:italic}
+.panels{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:28px}.panel{background:var(--card);border-radius:28px;padding:30px 26px;box-shadow:var(--shadow);font-size:.95rem}.panel h3{font-size:1.5rem}.ul{padding-left:18px;margin:0 0 1em}
+.tw{overflow-x:auto;background:var(--card);border-radius:28px;box-shadow:var(--shadow);padding:10px}table{border-collapse:collapse;width:100%;min-width:680px;text-align:center}th,td{padding:12px 10px;border-bottom:1px solid rgba(212,175,106,.18)}thead th{color:var(--brown);font-family:"Cormorant Garamond",serif;font-size:1.15rem}tbody th{text-align:left;color:var(--brown)}small{display:block;opacity:.7;font-size:.75rem}
+.masters{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.mc{background:var(--card);border-radius:26px;padding:28px 24px;box-shadow:var(--shadow);font-size:.95rem}.mc h4{font-family:"Cormorant Garamond",serif;font-size:1.5rem;color:var(--brown);margin:0 0 .4em}.mc p{margin:0}
+.bt{background:var(--card);border-radius:22px;padding:16px 22px;box-shadow:var(--shadow)}.bt summary{cursor:pointer;font-weight:600;color:var(--brown)}.bt ol{padding-left:20px;margin:12px 0 0;font-size:.95rem}.bt p{font-size:.92rem;margin:12px 0 0}
+.lk{color:var(--mint-d)}.grid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 2.5s ease}.grid figure:hover img{transform:scale(1.05)}
+@media(max-width:960px){.panels,.masters{grid-template-columns:1fr 1fr}}@media(max-width:780px){.panels,.masters{grid-template-columns:1fr}}
+.acc{background:var(--card);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;transform:none!important}
+.acc>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;list-style:none;font-family:"Cormorant Garamond",serif;font-size:1.35rem;font-weight:600;color:var(--brown)}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary em{font:600 .85rem "Nunito Sans",sans-serif;color:var(--mint-d);margin-left:auto;white-space:nowrap}
+.acc>summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--mint-d);transition:transform .4s}
+.acc[open]>summary::after{transform:rotate(45deg)}
+.acc .ab{padding:0 20px 18px;font-size:.95rem}
+.stack{display:grid;gap:12px;max-width:760px;margin:0 auto}
+.stack .acc{box-shadow:0 6px 20px rgba(0,0,0,.28)}
+.card:hover{box-shadow:none}
+@media(max-width:780px){
+html{font-size:16px}body{font-size:16px;line-height:1.6}
+section{padding:48px 16px}
+#hero{min-height:82svh;padding-top:96px}
+.lead{margin:0 auto 24px}
+h2{font-size:1.9rem}
+.about-grid{gap:20px}
+.perks{gap:10px}.perks li{padding:14px 18px}
+.why{grid-template-columns:1fr 1fr;gap:14px;text-align:left}.why h3{font-size:1.15rem}.why p{font-size:.88rem}
+.grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px;-webkit-overflow-scrolling:touch}
+.grid figure,.grid figure:nth-child(n){flex:0 0 82%;scroll-snap-align:center;aspect-ratio:4/5}
+.rev{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:8px}
+.rev blockquote{flex:0 0 86%;scroll-snap-align:center;padding:22px 20px}.rev blockquote p{font-size:1.1rem}
+form,.info{padding:20px}.contact{gap:18px}
+footer{padding-top:24px}}
 /* reveal */
 .rv{opacity:0;transform:translateY(36px);transition:opacity 1.4s ease,transform 1.4s ease}
 .rv.in{opacity:1;transform:none}
@@ -117,194 +151,95 @@ form,.info{padding:26px}}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-<defs>
-<symbol id="lotus" viewBox="0 0 120 90"><g fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M60 82C40 70 38 40 60 12c22 28 20 58 0 70z"/><path d="M58 80C34 80 14 62 12 36c24 2 40 18 46 44z"/><path d="M62 80c24 0 44-18 46-44-24 2-40 18-46 44z"/><path d="M52 82C26 86 6 74 2 56c20-2 36 6 50 26z" opacity=".6"/><path d="M68 82c26 4 46-8 50-26-20-2-36 6-50 26z" opacity=".6"/></g></symbol>
-<symbol id="leaf" viewBox="0 0 80 120"><path d="M40 4C8 34 8 86 40 116 72 86 72 34 40 4z" fill="currentColor" opacity=".85"/><path d="M40 20v96" stroke="var(--bg)" stroke-width="2" fill="none" opacity=".7"/></symbol>
-<symbol id="drop" viewBox="0 0 60 80"><path d="M30 4C12 32 6 46 6 54a24 24 0 0 0 48 0c0-8-6-22-24-50z" fill="currentColor"/><path d="M18 52a12 12 0 0 0 10 12" stroke="#fff" stroke-opacity=".6" stroke-width="3" fill="none" stroke-linecap="round"/></symbol>
-<symbol id="stone" viewBox="0 0 140 70"><ellipse cx="70" cy="50" rx="62" ry="18" fill="currentColor"/><ellipse cx="70" cy="30" rx="44" ry="14" fill="currentColor" opacity=".8"/><ellipse cx="70" cy="14" rx="26" ry="9" fill="currentColor" opacity=".65"/></symbol>
-<symbol id="wave" viewBox="0 0 400 60"><path d="M0 30c33-30 66-30 100 0s67 30 100 0 67-30 100 0 67 30 100 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></symbol>
-<symbol id="candle" viewBox="0 0 60 120"><path d="M30 4c10 12 12 20 0 30-12-10-10-18 0-30z" fill="#e8a94f"/><rect x="24" y="38" width="12" height="4" rx="2" fill="currentColor" opacity=".7"/><rect x="14" y="42" width="32" height="70" rx="10" fill="currentColor"/><ellipse cx="30" cy="114" rx="26" ry="4" fill="currentColor" opacity=".4"/></symbol>
-<linearGradient id="gWall" x1="0" y1="0" x2="0" y2="1"><stop offset="0.0" stop-color="#3a362f"/><stop offset="1.0" stop-color="#1f1e1c"/></linearGradient>
-<linearGradient id="gTowel" x1="0" y1="0" x2="0" y2="1"><stop offset="0.0" stop-color="#6b5835"/><stop offset="1.0" stop-color="#2f2819"/></linearGradient>
-<radialGradient id="gSt" cx=".35" cy=".28" r=".85"><stop offset="0" stop-color="#9a8a78"/><stop offset=".5" stop-color="#55463a"/><stop offset="1" stop-color="#2a2018"/></radialGradient>
-<linearGradient id="gWax" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cdb88f"/><stop offset=".45" stop-color="#fff5de"/><stop offset="1" stop-color="#bda57a"/></linearGradient>
-<radialGradient id="gFl" cx=".5" cy=".75" r=".6"><stop offset="0" stop-color="#fff"/><stop offset=".35" stop-color="#ffd980"/><stop offset="1" stop-color="#e8782f"/></radialGradient>
-<radialGradient id="gGlow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffc766" stop-opacity=".85"/><stop offset="1" stop-color="#ffc766" stop-opacity="0"/></radialGradient>
-<linearGradient id="gAmber" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6e3510"/><stop offset=".4" stop-color="#e0932f"/><stop offset=".7" stop-color="#f4bd5e"/><stop offset="1" stop-color="#8d4614"/></linearGradient>
-<linearGradient id="gWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c79a69"/><stop offset="1" stop-color="#7d5532"/></linearGradient>
-<linearGradient id="gCap" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5a3f2b"/><stop offset=".4" stop-color="#9a7550"/><stop offset="1" stop-color="#4a3322"/></linearGradient>
-<radialGradient id="gDrop" cx=".35" cy=".35" r=".8"><stop offset="0" stop-color="#ffe3a0"/><stop offset=".6" stop-color="#e0932f"/><stop offset="1" stop-color="#9a5517"/></radialGradient>
-<linearGradient id="gPet" x1="0" y1="0" x2="0" y2="1"><stop offset="0.0" stop-color="#fff4d8"/><stop offset="0.5" stop-color="#f1d9a2"/><stop offset="1.0" stop-color="#c9a050"/></linearGradient>
-<linearGradient id="gWat" x1="0" y1="0" x2="0" y2="1"><stop offset="0.0" stop-color="#9a875a"/><stop offset="0.5" stop-color="#4d4332"/><stop offset="1.0" stop-color="#1d1a14"/></linearGradient>
-<radialGradient id="gPad" cx=".4" cy=".4" r=".8"><stop offset="0.0" stop-color="#b59a55"/><stop offset="1.0" stop-color="#5e4c24"/></radialGradient>
-<linearGradient id="gLf" x1="0" y1="0" x2="1" y2="1"><stop offset="0.0" stop-color="#f0d79f"/><stop offset="0.5" stop-color="#c19a45"/><stop offset="1.0" stop-color="#6e5424"/></linearGradient>
-<linearGradient id="gLin" x1="0" y1="0" x2="1" y2="1"><stop offset="0.0" stop-color="#3d382f"/><stop offset="1.0" stop-color="#25221d"/></linearGradient>
-<linearGradient id="gBowl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#cdbb9b"/><stop offset=".4" stop-color="#fbf3e4"/><stop offset="1" stop-color="#bfab87"/></linearGradient>
-<filter id="fB" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
-<filter id="fS" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.8"/></filter>
-<filter id="gr"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 .35 0 0 0 0 .28 0 0 0 0 .2 0 0 0 .55 0"/></filter>
-<symbol id="lf" viewBox="0 0 80 120"><path d="M40 4C8 34 8 86 40 116 72 86 72 34 40 4z" fill="url(#gLf)"/><path d="M40 4C8 34 8 86 40 116z" fill="#fff" opacity=".12"/><g stroke="#4a3a14" stroke-opacity=".45" stroke-width="1.2" fill="none"><path d="M40 10V116"/><path d="M40 36L20 50M40 36L60 50M40 58L16 74M40 58L64 74M40 80L22 94M40 80L58 94"/></g></symbol>
-</defs>
-</svg>
 
 <header><nav>
-<a class="logo" href="#hero"><svg width="30" height="24" style="color:var(--mint-d)"><use href="#lotus"/></svg>Оазис Тиші</a>
+<a class="logo" href="#hero">O.massage</a>
 <ul id="menu">
-<li><a href="#about">Про нас</a></li><li><a href="#services">Послуги</a></li><li><a href="#why">Переваги</a></li><li><a href="#gallery">Галерея</a></li><li><a href="#reviews">Відгуки</a></li><li><a href="#contacts">Контакти</a></li>
+<li><a href="#about">Про нас</a></li><li><a href="#services">Послуги</a></li><li><a href="#why">Переваги</a></li><li><a href="#reviews">Відгуки</a></li><li><a href="#contacts">Контакти</a></li>
 </ul>
 <button class="burger" id="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span><span></span></button>
 </nav></header>
 
 <main>
 <section id="hero">
-<div class="layer" data-s=".15" style="color:var(--mint-d)">
-<svg class="deco float" style="left:6%;top:22%;width:170px;opacity:.35" aria-hidden="true"><use href="#leaf"/></svg>
-<svg class="deco float b" style="right:8%;top:30%;width:120px;opacity:.3;color:var(--sand)" aria-hidden="true"><use href="#leaf"/></svg>
-<svg class="deco" style="left:0;right:0;bottom:18%;width:100%;height:60px;opacity:.35" preserveAspectRatio="none" aria-hidden="true"><use href="#wave"/></svg>
-</div>
-<div class="layer" data-s=".32" style="color:var(--brown)">
-<svg class="deco breathe" style="right:12%;bottom:14%;width:260px;opacity:.28" aria-hidden="true"><use href="#lotus"/></svg>
-<svg class="deco float" style="left:10%;bottom:12%;width:150px;opacity:.3;color:var(--sand)" aria-hidden="true"><use href="#stone"/></svg>
-<svg class="deco float b" style="left:46%;top:14%;width:34px;opacity:.4;color:var(--mint-d)" aria-hidden="true"><use href="#drop"/></svg>
-</div>
 <div class="wrap">
-<h1 class="fadein">Оазис Тиші</h1>
-<p class="tag fadein" style="animation-delay:.5s">Місце, де тіло згадує спокій</p>
+<h1 class="fadein">O.massage</h1>
+<p class="tag fadein" style="animation-delay:.5s">Професійні майстри, які піклуються про вас і ваше тіло</p>
 <a class="btn fadein" style="animation-delay:1s" href="#contacts">Записатися</a>
 </div>
 </section>
-
 <section id="about">
-<svg class="deco float" style="right:-30px;top:40px;width:200px;color:var(--mint-d);opacity:.25" aria-hidden="true"><use href="#leaf"/></svg>
-<div class="wrap about-grid">
-<div class="rv">
-<h2>Про нас</h2>
-<p>«Оазис Тиші» відкрився у 2014 році як маленька кімната з двома кушетками та великою мрією: створити місце, куди хочеться повертатися, щоб видихнути. Сьогодні це затишний салон із командою з шести майстрів.</p>
-<p>Наша філософія проста: тіло знає, що йому потрібно, а ми лише уважно слухаємо. Кожен сеанс починається з розмови, а закінчується чашкою трав’яного чаю.</p>
-</div>
-<ul class="perks rv d1">
-<li><b>10 років досвіду</b>Понад 15 000 проведених сеансів.</li>
-<li><b>Сертифіковані майстри</b>Підтверджена медична та масажна освіта.</li>
-<li><b>Затишна атмосфера</b>Приглушене світло, аромати трав і тиша.</li>
-</ul>
-</div>
-</section>
-
-<section id="services">
-<svg class="deco breathe" style="left:-40px;bottom:30px;width:240px;color:var(--sand);opacity:.35" aria-hidden="true"><use href="#lotus"/></svg>
 <div class="wrap">
-<h2 class="rv">Наші послуги</h2>
-<p class="lead rv">Чотири напрями, які ми робимо найкраще. Кожну процедуру підлаштуємо під вас.</p>
-<div class="cards">
-<article class="card rv"><svg style="color:var(--mint-d)"><use href="#stone"/></svg><h3>Класичний масаж</h3><p>Глибоке опрацювання спини, шиї та плечей. Знімає напругу після сидячої роботи.</p><div class="meta"><span>60 хв</span><span>800 грн</span></div></article>
-<article class="card rv d1"><svg style="color:var(--sand)"><use href="#drop"/></svg><h3>Релакс з оліями</h3><p>Повільні плавні рухи з теплими ароматичними оліями. Повне занурення в спокій.</p><div class="meta"><span>90 хв</span><span>1 200 грн</span></div></article>
-<article class="card rv d2"><svg style="color:var(--brown)"><use href="#leaf"/></svg><h3>Спортивний масаж</h3><p>Відновлення м’язів до та після тренувань, робота з тригерними точками.</p><div class="meta"><span>60 хв</span><span>950 грн</span></div></article>
-<article class="card rv d3"><svg style="color:var(--mint-d)"><use href="#lotus"/></svg><h3>Масаж обличчя</h3><p>М’який лімфодренаж і розслаблення мімічних м’язів. Свіжий вигляд і чітка лінія овалу.</p><div class="meta"><span>45 хв</span><span>700 грн</span></div></article>
-</div></div>
+<div class="about-grid">
+<div class="rv"><h2>Про нас</h2>
+<p>O.massage — масажний салон у Києві. Професійні майстри, які піклуються про вас і ваше тіло.</p>
+<p>Майстри працюють через уважне відчуття тіла клієнта й підбирають техніку індивідуально під запит і стан.</p></div>
+<ul class="perks rv d1">
+<li><b>Сильний чи м’який масаж</b>За запитом кожен майстер робить як сильний, так і м’який масаж.</li>
+<li><b>Індивідуальна техніка</b>Під ваш запит і стан.</li>
+<li><b>Сертифікати та абонементи</b>На 1, 2, 3 сеанси та абонементи на 5, 10, 15 сеансів.</li>
+</ul></div>
+<h3 class="rv" style="text-align:center;margin:44px 0 18px;font-size:1.8rem">Наші майстри</h3>
+<div class="stack"><details class="acc mc rv"><summary><span>Руслана</span></summary><div class="ab"><p>Робить усі види ручного масажу: класичний, лімфодренажний, розслаблюючий, спортивний, антицелюлітний. Спеціалізується на оздоровчому та відновлювальному масажах. Працює не лише з симптомом, а з причиною напруги.</p></div></details><details class="acc mc rv"><summary><span>Олена</span></summary><div class="ab"><p>Робить усі види ручного масажу: класичний, лімфодренажний, спортивний, антицелюлітний тощо. Працює через уважне відчуття тіла клієнта. Підбирає техніку індивідуально під запит і стан.</p></div></details><details class="acc mc rv"><summary><span>Анна</span></summary><div class="ab"><p>Робить усі види ручного масажу: класичний, лімфодренажний, спортивний, антицелюлітний тощо. Спеціалізується на лімфодренажному масажі. Допомагає тілу поступово відновлювати баланс.</p></div></details><details class="acc mc rv"><summary><span>Вікторія</span></summary><div class="ab"><p>Робить усі види ручного масажу: класичний, лімфодренажний, спортивний, антицелюлітний тощо. Поєднує силу, техніку та контроль навантаження. Працює з м’язовими зажимами та відновленням після навантажень.</p></div></details><details class="acc mc rv"><summary><span>Євгенія</span></summary><div class="ab"><p>Робить усі види масажу: класичний, спортивний, лімфодренажний, антицелюлітний. Спеціалізується на тонізуючих масажах. У роботі поєднує класичні та сучасні масажні техніки. Працює з тригерними зонами та хронічною напругою.</p></div></details><details class="acc mc rv"><summary><span>Анна · масаж обличчя</span></summary><div class="ab"><p>Робить такі види масажу обличчя: класичний академічний, пластичний, моделюючий, лікувальний Жаке, масаж Gym. Спеціалізується на антивікових техніках. Поєднує класичні та ліфтинг-техніки масажу обличчя. Підбирає інтенсивність індивідуально під стан шкіри.</p></div></details></div>
+</div>
 </section>
-
+<section id="services">
+<div class="wrap">
+<h2 class="rv">Послуги та ціни</h2>
+<p class="lead rv">Ціни на масаж: будь-який масаж від 30 до 120 хвилин.</p>
+<div class="stack"><details class="acc card rv"><summary><span>Масаж</span><em>від 1 000 грн</em></summary><div class="ab"><p>Класичний, лімфодренажний, розслаблюючий, спортивний, антицелюлітний. За запитом: як сильний, так і м’який масаж.</p><ul class="pl"><li><span>30 хв</span><b>1 000 грн</b></li><li><span>60 хв</span><b>1 800 грн</b></li><li><span>90 хв</span><b>2 400 грн</b></li><li><span>120 хв</span><b>3 200 грн</b></li></ul></div></details><details class="acc card rv"><summary><span>Масаж обличчя</span><em>45 хв + маска</em></summary><div class="ab"><p>Масаж 45 хв + альгінатна маска 15 хв. На вибір: масаж Gym, класичний, пластифікуючий (міостимулюючий), моделюючий, лікувальний масаж по Жаке. Після масажу: очищення, нанесення сироватки, альгінатна маска за типом шкіри.</p><p class="note">Онлайн запису на цей масаж немає. Пишіть у директ для бронювання віконець.</p></div></details><details class="acc card rv"><summary><span>Обгортання</span><em>від 2 000 ₴</em></summary><div class="ab"><p>Віскі обгортання — це бандажна процедура із застосуванням натуральних косметичних засобів австрійської марки Aromaderm Styx Naturcosmetics. Щоб схуднути, зменшити набряки, вивести шлаки, покращити метаболізм та зменшити апетит, зменшити прояви варикозу, позбутись целюліту.</p><ul class="pl"><li><span>Віскі обгортання</span><b>2 600 ₴</b></li><li><span>Гаряче обгортання</span><b>2 400 ₴</b></li><li><span>Гаряче обгортання (локально)</span><b>2 000 ₴</b></li></ul></div></details><details class="acc card rv"><summary><span>Тейпування</span><em>800 ₴</em></summary><div class="ab"><p>Зони: руки, груди, живіт, стегна, сідниці, плечі, спина, грудний відділ, шийний відділ, поперековий відділ, коліно, гомілковий суглоб.</p><ul class="pl"><li><span>Одна зона</span><b>800 ₴</b></li></ul></div></details></div>
+<div class="stack" style="margin-top:12px"><details class="acc rv"><summary><span>Спортивний масаж</span></summary><div class="ab"><p>Цей вид масажу ми рекомендуємо людям, які ведуть активний спосіб життя або підвладні важким фізичним навантаженням.</p><p>Спортивний масаж підготовлює м’язи до напруги, забезпечує максимальну активацію їхніх функціональних можливостей і допомагає застрахувати від травм. Також цей масаж спрямований на відновлення і полегшення крипатури після тренувань.</p><p class="note">Ви завжди можете повідомити нам про свої побажання щодо будь-якої частини тіла, адже часто спортивний масаж вимагає інтенсивного опрацювання певної ділянки тіла.</p></div></details><details class="acc rv"><summary><span>Антицелюлітний масаж</span></summary><div class="ab"><p>Його дія полягає в стимуляції процесів всередині організму, завдяки яким виводиться зайва вода та шлаки з жирових клітин. Таким чином, можна зменшити або повністю усунути целюліт.</p><ul class="ul"><li>Покращує кровопостачання, прискорює рух лімфи.</li><li>Знімає застійні явища та покращує обмінні процеси.</li><li>Робить шкіру більш пружною та еластичною.</li></ul><p class="note">Наші фахівці рекомендують притримуватись дієти, робити фізичні вправи та контрастні процедури для досягнення максимального ефекту.</p></div></details><details class="acc rv"><summary><span>Масаж на 30 хвилин</span></summary><div class="ab"><p>30 хвилин обирають для локального масажу. Це може бути масаж спини, шийно-комірцевої зони, ніг чи голови.</p><p class="note">Також за цей час можливий антицелюлітний масаж однієї зони.</p></div></details></div>
+<details class="acc rv" style="max-width:760px;margin:12px auto 0"><summary><span>Сертифікати та абонементи</span></summary><div class="ab"><div class="tw rv"><table><thead><tr><th rowspan="2">Тривалість</th><th colspan="3">Сертифікат</th><th colspan="3">Абонемент</th></tr><tr><th>1 сеанс</th><th>2 сеанси</th><th>3 сеанси</th><th>5 сеансів</th><th>10 сеансів</th><th>15 сеансів</th></tr></thead><tbody><tr><th>30 хв</th><td>1 000 грн</td><td>2 000 грн</td><td>3 000 грн</td><td>4 500 грн<small>економія 500 грн</small></td><td>9 000 грн<small>економія 1 000 грн</small></td><td>12 750 грн<small>економія 2 250 грн</small></td></tr><tr><th>60 хв</th><td>1 800 грн</td><td>3 600 грн</td><td>5 400 грн</td><td>8 500 грн<small>економія 500 грн</small></td><td>16 200 грн<small>економія 1 800 грн</small></td><td>22 950 грн<small>економія 4 050 грн</small></td></tr><tr><th>90 хв</th><td>2 400 грн</td><td>4 800 грн</td><td>7 200 грн</td><td>11 500 грн<small>економія 500 грн</small></td><td>21 600 грн<small>економія 2 400 грн</small></td><td>30 600 грн<small>економія 5 400 грн</small></td></tr><tr><th>120 хв</th><td>3 200 грн</td><td>6 400 грн</td><td>9 600 грн</td><td>15 500 грн<small>економія 500 грн</small></td><td>28 800 грн<small>економія 3 200 грн</small></td><td>40 800 грн<small>економія 7 200 грн</small></td></tr></tbody></table></div></div></details>
+</div>
+</section>
 <section id="why">
 <div class="wrap">
 <h2 class="rv">Чому обирають нас</h2>
-<p class="lead rv">Те, що наші гості цінують найбільше.</p>
-<div class="why">
-<div class="rv"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#d4af6a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 34s-13-8-13-18a7 7 0 0 1 13-3 7 7 0 0 1 13 3c0 10-13 18-13 18z"/></svg></div><h3>Індивідуальний підхід</h3><p>Підбираємо силу та техніку під ваше самопочуття.</p></div>
-<div class="rv d1"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#e6c88a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="15" r="9"/><path d="M14 23l-3 13 9-5 9 5-3-13"/></svg></div><h3>Сертифіковані майстри</h3><p>Регулярно навчаємося й підтверджуємо кваліфікацію.</p></div>
-<div class="rv d2"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#d4af6a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4c8 9 12 14 12 20a12 12 0 0 1-24 0c0-6 4-11 12-20z"/></svg></div><h3>Натуральні олії</h3><p>Лише гіпоалергенні засоби без зайвих добавок.</p></div>
-<div class="rv d3"><div class="ic"><svg viewBox="0 0 40 40" fill="none" stroke="#e6c88a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="20" cy="20" r="15"/><path d="M20 10v10l7 4"/></svg></div><h3>Зручний графік</h3><p>Працюємо щодня, у тому числі ввечері та у вихідні.</p></div>
-</div></div>
+<p class="lead rv">Те, що ми робимо для вас.</p>
+<div class="why"><div class="rv"><h3>Сильний чи м’який</h3><p>За запитом майстри роблять як сильний, так і м’який масаж.</p></div><div class="rv d1"><h3>Індивідуальна техніка</h3><p>Підбираємо техніку індивідуально під ваш запит і стан.</p></div><div class="rv d2"><h3>Bath Tea</h3><p>Для продовження задоволення та розслаблення після масажу. Відчуйте релакс вдома.</p></div><div class="rv d3"><h3>Сертифікати та абонементи</h3><p>Сертифікати на 1, 2 та 3 сеанси й абонементи на 5, 10 та 15 сеансів.</p></div></div>
+<div style="max-width:720px;margin:44px auto 0"><details class="bt rv"><summary>Склад Bath Tea</summary><ol>
+<li>жовтий: базилік, шавлія, меліса, ромашка, апельсин, сіль, олія апельсину</li>
+<li>рожевий: лаванда, ромашка, троянда, календула, сіль, лавандова олія</li>
+<li>зелений: троянда, апельсин, кардамон, палички кориці, сіль, меліса, олія кориці</li>
+<li>молочний: лаванда, ромашка, троянда, сухе молоко, сіль, ванільна олія</li>
+<li>білий: евкаліпт, іван-чай, хвоя, апельсин, олія ялини, сіль, олія мандарину</li>
+<li>коричневий: лаванда, шавлія, меліса, олія меліси, олія валеріани, сіль</li></ol></details></div>
+</div>
 </section>
-
-<section id="gallery">
-<div class="wrap">
-<h2 class="rv">Галерея</h2>
-<p class="lead rv">Кілька миттєвостей із нашого салону.</p>
-<div class="grid">
-<figure class="rv"><svg class="art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice"><rect width="300" height="300" fill="url(#gWall)"/><rect y="195" width="300" height="105" fill="url(#gTowel)"/><path d="M0 218H300M0 238H300" stroke="#fff" stroke-opacity=".45" stroke-width="3"/>
-<ellipse cx="150" cy="248" rx="100" ry="14" fill="#2a1d12" opacity=".4" filter="url(#fB)"/>
-<ellipse cx="150" cy="225" rx="86" ry="28" fill="url(#gSt)"/><ellipse cx="124" cy="215" rx="30" ry="7" fill="#fff" opacity=".18" filter="url(#fS)"/>
-<ellipse cx="152" cy="184" rx="60" ry="21" fill="url(#gSt)"/><ellipse cx="134" cy="177" rx="20" ry="5" fill="#fff" opacity=".2" filter="url(#fS)"/>
-<ellipse cx="150" cy="153" rx="38" ry="14" fill="url(#gSt)"/><ellipse cx="138" cy="148" rx="12" ry="3.5" fill="#fff" opacity=".22" filter="url(#fS)"/>
-<g fill="none" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity=".4" filter="url(#fS)" class="float"><path d="M138 130c-14-18 12-26-2-46"/><path d="M162 128c14-18-12-28 2-48"/></g>
-<rect width="300" height="300" filter="url(#gr)" opacity=".18"/></svg><figcaption>Камені для масажу</figcaption></figure>
-<figure class="rv d1"><svg class="art" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="#2a1f17"/><circle cx="150" cy="170" r="190" fill="url(#gGlow)" class="breathe"/>
-<circle cx="50" cy="90" r="22" fill="#ffc766" opacity=".25" filter="url(#fS)"/><circle cx="250" cy="130" r="30" fill="#ffc766" opacity=".18" filter="url(#fS)"/><circle cx="235" cy="60" r="14" fill="#ffd98a" opacity=".3" filter="url(#fS)"/>
-<rect y="318" width="300" height="57" fill="url(#gWood)"/><ellipse cx="150" cy="336" rx="80" ry="12" fill="#ffc766" opacity=".45" filter="url(#fB)"/>
-<rect x="105" y="190" width="90" height="136" rx="9" fill="url(#gWax)"/><ellipse cx="150" cy="190" rx="45" ry="9" fill="#fff6e2"/><ellipse cx="150" cy="191" rx="30" ry="5" fill="#f2d79a"/><path d="M118 192v26c0 6 8 6 8 0v-24M172 192v38c0 7 9 7 9 0v-36" fill="#fff6e2"/>
-<path d="M150 190v-14" stroke="#2a1a10" stroke-width="2.5" stroke-linecap="round"/>
-<path d="M150 108c-18 26-16 54 0 66 16-12 18-40 0-66z" fill="#ff9a3c" opacity=".55" filter="url(#fS)"/><path d="M150 118c-11 20-10 40 0 50 10-10 11-30 0-50z" fill="url(#gFl)" class="breathe"/>
-<rect width="300" height="375" filter="url(#gr)" opacity=".2"/></svg><figcaption>Свічки та тиша</figcaption></figure>
-<figure class="rv d2"><svg class="art" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="url(#gWall)"/><use href="#lf" x="190" y="90" width="80" height="120" transform="rotate(25 230 150)" opacity=".8"/>
-<rect y="320" width="300" height="55" fill="url(#gWood)"/><ellipse cx="150" cy="330" rx="70" ry="9" fill="#2a1d12" opacity=".45" filter="url(#fB)"/>
-<rect x="132" y="104" width="36" height="52" fill="url(#gAmber)"/><rect x="127" y="68" width="46" height="40" rx="8" fill="url(#gCap)"/><path d="M142 68c0-22 16-22 16 0" fill="#e8d9bd"/>
-<path d="M108 168c0-14 14-20 24-12h36c10-8 24-2 24 12v146c0 6-4 10-10 10H118c-6 0-10-4-10-10z" fill="url(#gAmber)"/><rect x="118" y="176" width="9" height="128" rx="4.5" fill="#fff" opacity=".45" filter="url(#fS)"/>
-<rect x="122" y="214" width="56" height="64" rx="5" fill="#fbf3e2"/><g style="color:#d4af6a"><use href="#lotus" x="130" y="224" width="40" height="30"/></g><path d="M130 264h40M134 270h32" stroke="#6b4f3a" stroke-width="2" stroke-linecap="round" opacity=".6"/>
-<path d="M60 340c-8 12-10 16-10 22a10 10 0 0 0 20 0c0-6-2-10-10-22z" fill="url(#gDrop)"/><path d="M240 336c-6 10-8 14-8 18a8 8 0 0 0 16 0c0-4-2-8-8-18z" fill="url(#gDrop)"/>
-<rect width="300" height="375" filter="url(#gr)" opacity=".15"/></svg><figcaption>Ароматичні олії</figcaption></figure>
-<figure class="rv"><svg class="art" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="url(#gWat)"/><rect width="300" height="200" fill="url(#gWall)" opacity=".85"/>
-<g fill="none" stroke="#fff" stroke-opacity=".4"><ellipse cx="150" cy="260" rx="130" ry="22"/><ellipse cx="150" cy="268" rx="100" ry="16"/><ellipse cx="150" cy="300" rx="140" ry="26" opacity=".6"/></g>
-<ellipse cx="70" cy="290" rx="48" ry="12" fill="url(#gPad)"/><ellipse cx="240" cy="310" rx="40" ry="10" fill="url(#gPad)" opacity=".9"/>
-<ellipse cx="150" cy="268" rx="70" ry="10" fill="#1d3b2e" opacity=".35" filter="url(#fB)"/>
-<g transform="translate(150 262)"><g id="pt" fill="url(#gPet)" stroke="#c9a050" stroke-opacity=".5">
-<path transform="rotate(-72) scale(.85)" d="M0 0C-30-20-34-70 0-110C34-70 30-20 0 0Z"/><path transform="rotate(72) scale(.85)" d="M0 0C-30-20-34-70 0-110C34-70 30-20 0 0Z"/>
-<path transform="rotate(-44) scale(.95)" d="M0 0C-30-20-34-70 0-110C34-70 30-20 0 0Z"/><path transform="rotate(44) scale(.95)" d="M0 0C-30-20-34-70 0-110C34-70 30-20 0 0Z"/>
-<path transform="rotate(-18)" d="M0 0C-30-20-34-70 0-110C34-70 30-20 0 0Z"/><path transform="rotate(18)" d="M0 0C-30-20-34-70 0-110C34-70 30-20 0 0Z"/><path d="M0 0C-30-20-34-70 0-110C34-70 30-20 0 0Z"/></g>
-<ellipse cy="-8" rx="14" ry="5" fill="#f2c85a"/></g>
-<rect width="300" height="375" filter="url(#gr)" opacity=".12"/></svg><figcaption>Лотос — наш символ</figcaption></figure>
-<figure class="rv d1"><svg class="art" viewBox="0 0 300 375" preserveAspectRatio="xMidYMid slice"><rect width="300" height="375" fill="url(#gLin)"/><path d="M0 60H300M0 140H300M0 220H300M0 300H300" stroke="#b9a67f" stroke-opacity=".18" stroke-width="2"/>
-<g filter="url(#fB)" fill="#2a1d12" opacity=".3"><use href="#lf" x="60" y="82" width="100" height="150" transform="rotate(-18 110 157)"/><use href="#lf" x="170" y="132" width="90" height="135" transform="rotate(22 215 200)"/></g>
-<use href="#lf" x="50" y="70" width="100" height="150" transform="rotate(-18 100 145)"/><use href="#lf" x="160" y="120" width="90" height="135" transform="rotate(22 205 188)"/><use href="#lf" x="90" y="230" width="70" height="105" transform="rotate(-40 125 282)" opacity=".92"/>
-<rect width="300" height="375" filter="url(#gr)" opacity=".22"/></svg><figcaption>Трав’яна кімната</figcaption></figure>
-<figure class="rv d2"><svg class="art" viewBox="0 0 300 300" preserveAspectRatio="xMidYMid slice"><rect width="300" height="300" fill="url(#gTowel)"/><ellipse cx="150" cy="268" rx="112" ry="14" fill="#2a1d12" opacity=".35" filter="url(#fB)"/>
-<path d="M40 170C46 245 108 280 150 280S254 245 260 170Z" fill="url(#gBowl)"/><ellipse cx="150" cy="170" rx="110" ry="30" fill="url(#gBowl)"/><ellipse cx="150" cy="172" rx="98" ry="24" fill="url(#gWat)"/>
-<g fill="none" stroke="#fff" stroke-opacity=".5"><ellipse cx="140" cy="176" rx="40" ry="8"/><ellipse cx="140" cy="176" rx="62" ry="13" opacity=".6"/></g>
-<ellipse cx="170" cy="168" rx="20" ry="8" fill="url(#gSt)"/><ellipse cx="112" cy="176" rx="15" ry="6" fill="url(#gSt)"/>
-<g fill="url(#gPet)" stroke="#c9a050" stroke-opacity=".5"><ellipse cx="140" cy="170" rx="13" ry="6" transform="rotate(-20 140 170)"/><ellipse cx="190" cy="180" rx="11" ry="5" transform="rotate(25 190 180)"/><ellipse cx="98" cy="164" rx="10" ry="4.5" transform="rotate(10 98 164)"/></g>
-<path d="M70 190C80 235 105 255 130 260" stroke="#fff" stroke-width="8" stroke-linecap="round" fill="none" opacity=".4" filter="url(#fS)"/>
-<rect width="300" height="300" filter="url(#gr)" opacity=".15"/></svg><figcaption>Гармонія</figcaption></figure>
-</div></div>
-</section>
-
 <section id="reviews">
 <div class="wrap">
 <h2 class="rv">Відгуки клієнтів</h2>
-<p class="lead rv">Слова наших гостей.</p>
-<div class="rev">
-<blockquote class="rv"><div class="stars">★★★★★</div><p>«Прийшла з болем у шиї після місяця дедлайнів, а пішла наче новою. Майстриня відчула кожен вузол».</p><cite>Олена К.</cite></blockquote>
-<blockquote class="rv d1"><div class="stars">★★★★★</div><p>«Релакс з оліями — найкращий подарунок собі. Така тиша, що я заснув просто на кушетці».</p><cite>Андрій М.</cite></blockquote>
-<blockquote class="rv d2"><div class="stars">★★★★★</div><p>«Ходжу на спортивний масаж після змагань. Відновлююся вдвічі швидше, і персонал дуже уважний».</p><cite>Марина Д.</cite></blockquote>
-</div></div>
-</section>
+<p class="lead rv">Оцінка 4,5 ★ на Google за 68 відгуками.</p>
+<div class="rev" id="revlist"><blockquote class="rv"><div class="stars">★★★★★</div><p>Затишне місце, де не хочеться поспішати: усе створено для розслаблення. Майстриня Анастасія спокійна й професійна, а чай наприкінці сеансу — приємний бонус. Адміністратор привітна й досвідчена.</p><cite>Ірина, відгук у Google</cite></blockquote><blockquote class="rv d1"><div class="stars">★★★★★</div><p>Була на масажі неодноразово і тут, і в інших салонах Києва. Вважає їх найкращими: сервіс, якість, локації, зручний запис. Подарункові сертифікати виручають на всі свята.</p><cite>Анастасія, відгук у Google</cite></blockquote><blockquote class="rv d2"><div class="stars">★★★★★</div><p>Чудова атмосфера, класні масажисти, тепло й затишно. Майстриня Анна робила масаж із медом, бамбуковими паличками, банками та гуаша. Смачний чай і печиво з передбаченням — приємний бонус.</p><cite>Поліна, відгук у Google</cite></blockquote></div>
+<p class="rv" style="text-align:center;margin-top:18px"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&amp;query=O.massage%20%D0%9A%D0%B8%D1%97%D0%B2%20%D0%93%D0%BE%D0%BD%D1%87%D0%B0%D1%80%D0%B0%2045%D0%90">Написати відгук у Google</a></p>
 
+</div>
+</section>
 <section id="contacts">
-<svg class="deco float" style="left:-20px;top:60px;width:150px;color:var(--sand);opacity:.4" aria-hidden="true"><use href="#stone"/></svg>
 <div class="wrap">
 <h2 class="rv">Контакти та запис</h2>
-<p class="lead rv">Залиште заявку, і ми передзвонимо протягом години, щоб підібрати зручний час.</p>
+<p class="lead rv">Залиште заявку, і ми з вами зв’яжемося.</p>
 <div class="contact">
 <form id="form" class="rv" novalidate>
 <label for="n">Ім’я</label><input id="n" required autocomplete="name" placeholder="Ваше ім’я">
 <label for="p">Телефон</label><input id="p" type="tel" required autocomplete="tel" placeholder="+380 __ ___ __ __">
 <label for="s">Послуга</label>
-<select id="s"><option>Класичний масаж</option><option>Релакс з оліями</option><option>Спортивний масаж</option><option>Масаж обличчя</option></select>
+<select id="s"><option>Масаж</option><option>Масаж обличчя</option><option>Обгортання</option><option>Тейпування</option></select>
 <input type="text" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
 <button class="btn" type="submit">Записатися</button>
 <div class="ok" id="ok" role="status"></div>
 </form>
-<div class="info rv d1">
-<h3>Знайти нас</h3>
-<dl>
-<dt>Адреса</dt><dd>м. Дніпро, вул. Січових Стрільців, 18</dd>
-<dt>Телефон</dt><dd>+380 50 123 45 67</dd>
-<dt>Графік роботи</dt><dd>Пн–Пт: 10:00–21:00<br>Сб–Нд: 11:00–19:00</dd>
-</dl>
-<div class="soc"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">Telegram</a></div>
-</div>
+<div class="info rv d1"><h3>Знайти нас</h3><dl>
+<dt>Адреси</dt><dd>Київ, вулиця Олеся Гончара, 45А<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F+%D0%9E%D0%BB%D0%B5%D1%81%D1%8F+%D0%93%D0%BE%D0%BD%D1%87%D0%B0%D1%80%D0%B0+45%D0%90+%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener" class="lk">Прокласти маршрут</a><br><br>Київ, Володимирська, 19 (біля готелю Hayatt), м. Золоті Ворота<br><a href="https://www.google.com/maps/search/?api=1&amp;query=%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D1%81%D1%8C%D0%BA%D0%B0+19+%D0%9A%D0%B8%D1%97%D0%B2" target="_blank" rel="noopener" class="lk">Прокласти маршрут</a></dd>
+<dt>Телефони</dt><dd><a href="tel:+380676397714" style="color:inherit">+380 67 639 77 14</a><br><a href="tel:+380671890556" style="color:inherit">067 189 05 56</a></dd>
+<dt>Графік роботи</dt><dd>Зачиняємося о 21:00</dd>
+<dt>Онлайн-запис</dt><dd><a class="lk" href="https://b964086.alteg.io/select-city/4/select-branch" target="_blank" rel="noopener">Записатися онлайн</a></dd></dl>
+<div class="soc"><a href="https://www.instagram.com/o.massage.me/" target="_blank" rel="noopener">Instagram</a><a href="https://www.threads.net/@o.massage.me" target="_blank" rel="noopener">Threads</a></div>
+<details class="bt" style="margin-top:22px"><summary>Правила запису та запізнень</summary><p>Ми поважаємо та любимо кожного нашого клієнта і дуже хочемо поваги до часу наших майстрів.</p><p>Якщо ви спізнюєтесь на масаж, а після вашого запису вільно, ми зробимо повноцінний масаж. Якщо ж після вашого запису є наступний клієнт і ви запізнились, ми вимушені відняти від вашого часу стільки хвилин, на скільки ви запізнились.</p><p>Якщо час запису затримуємо ми, ви отримуєте повноцінний сеанс масажу, і час ми не віднімаємо.</p><p>Дякуємо за розуміння.</p></details></div>
 </div></div>
 </section>
 </main>
-<footer>© 2026 Оазис Тиші. Масажний салон. Усі права захищено.</footer>
+<footer>© 2026 O.massage. Усі права захищено.</footer>
 
 <script>
 (function(){
@@ -331,7 +266,7 @@ btn.disabled=true;btn.textContent='Надсилаємо…';
 var ac=new AbortController(),tm=setTimeout(function(){ac.abort()},15000);
 fetch('https://formsubmit.co/ajax/'+MAIL,{signal:ac.signal,method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify({'Ім’я':n,'Телефон':p,'Послуга':sv,_subject:'Новий запис з сайту: '+sv,_template:'table',_captcha:'false'})})
 .then(function(r){if(!r.ok)throw 0;o.textContent='Дякуємо, '+n+'! Ми зателефонуємо вам найближчим часом.';f.reset()})
-.catch(function(){o.textContent='Не вдалося надіслати заявку. Зателефонуйте нам: +380 50 123 45 67.'})
+.catch(function(){o.textContent='Не вдалося надіслати заявку. Зателефонуйте нам: +380 67 639 77 14.'})
 .then(function(){clearTimeout(tm);btn.disabled=false;btn.textContent='Записатися'});
 });
 })();
